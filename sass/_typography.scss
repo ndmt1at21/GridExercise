@@ -1,0 +1,65 @@
+.heading {
+    font-family: $font-display;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend .heading;
+    font-size: 4.5rem;
+    &::first-letter {
+        text-transform: uppercase;
+    }
+
+    &--light {
+        color: $color-grey-light-1;
+    }
+
+    &--dark {
+        color: $color-secondary;
+        font-style: italic;
+        font-size: 4rem;
+    }
+}
+
+.heading-2 {
+    @extend .heading;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+.heading-3 {
+    @extend .heading;
+    font-size: 1.6rem;
+    color: $color-primary;
+    text-transform: uppercase;
+}
+
+.button {
+    @extend .heading;
+    border: none;
+    background-color: $color-primary;
+    color: $color-grey-light-1;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 1.75rem 3rem;
+    cursor: pointer;
+    
+    &:hover,
+    &:focus {
+        background-color: $color-primary-dark;
+    }
+}
+
+.heading-4 {
+    @extend .heading;
+    text-transform: capitalize;
+    font-size: 2rem;
+
+    &--light {
+        color: $color-grey-light-1;
+    }
+
+    &--dark {
+        color: $color-secondary;
+    }
+}
