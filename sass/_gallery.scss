@@ -3,8 +3,18 @@
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 5vw);
-   row-gap: 2rem;
-   column-gap: 2rem;
+    row-gap: 2rem;
+    column-gap: 2rem;
+
+    @media screen and (max-width: 37.5em) {
+        row-gap: 1rem;
+        column-gap: 1rem;
+    }
+
+    @media screen and (max-width: 18.75em) {
+        row-gap: 0.5rem;
+        column-gap: 0.5rem;
+    }
 
     &__img {
         width: 100%;
