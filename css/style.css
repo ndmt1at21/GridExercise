@@ -144,6 +144,10 @@ html {
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   column-gap: 2rem; }
+  @media screen and (max-width: 25em) {
+    .heading__seenon-logos {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 4rem; } }
   .heading__seenon-logos .seenon-logo__photo {
     filter: brightness(0.7);
     height: 2.75rem;
@@ -190,6 +194,10 @@ html {
       .realtors__list {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: min-content;
+        column-gap: 4rem; } }
+    @media screen and (max-width: 37.5em) {
+      .realtors__list {
+        grid-template-columns: 1fr;
         column-gap: 4rem; } }
   .realtors__item {
     display: flex;
@@ -395,6 +403,12 @@ html {
     column-gap: 2rem;
     justify-items: center;
     align-items: center; }
+    @media screen and (max-width: 75em) {
+      .footer__nav {
+        grid-template-columns: repeat(3, minmax(15rem, 1fr)); } }
+    @media screen and (max-width: 56.25em) {
+      .footer__nav {
+        grid-template-columns: repeat(2, minmax(10rem, 1fr)); } }
   .footer__link, .footer__link:link, .footer__link:visited {
     padding: 2rem 2rem;
     color: #f9f7f6;

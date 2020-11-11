@@ -27,6 +27,11 @@
             grid-template-rows: min-content;
             column-gap: 4rem;
         }
+
+        @media screen and (max-width: 37.5em) {
+            grid-template-columns: 1fr;
+            column-gap: 4rem;
+        }
     }
 
     &__item {
