@@ -1,13 +1,23 @@
 .header {
     grid-row: 1 / 2;
     grid-column: full-start / col-end 6;
+
+    @media screen and (max-width: 56.25em){
+        grid-row: 2 / 3;
+        grid-column: sidebar-start / full-end;    
+    }
+
     background-image: linear-gradient(to left, rgba($color-secondary, 0.9), rgba($color-secondary, 0.9)),
                         url(../img/house-1.jpeg);
     background-size: cover;
+    background-position: center;
     display: grid;
     grid-template-rows: 1fr min-content minmax(6rem, min-content) min-content 1fr;
+    grid-template-columns: minmax(min-content, max-content);
     row-gap: 1.5rem;
-    padding: 5rem 12rem 7rem;
+    padding: 7rem;
+    padding-bottom: 8rem;
+    justify-content: center;
 
     .button {
         justify-self: start;
@@ -20,15 +30,19 @@
 }
 
 .heading__seenon-logos {
-    height: 2.5rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+    column-gap: 2rem;
 
-    & > * {
+    .seenon-logo__photo {
         filter: brightness(0.7);
-        height: 2.5rem;
+        height: 2.75rem;
         max-width: 100%;
+        
+        @media screen and (max-width: 56.25em) {
+            height: 2rem;
+        }
     }
 }
 

@@ -10,7 +10,7 @@
         font-weight: 300;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         column-gap: 2rem;
         justify-items: center;
         align-items: center;
@@ -37,5 +37,9 @@
         font-size: 1.5rem;
         color: $color-grey-light-2;
         margin: 5rem 20rem 0;
+
+        @media screen and (max-width: 56.25em) {
+            margin: 5rem;
+        }
     }
 }

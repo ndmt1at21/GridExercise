@@ -2,15 +2,28 @@
     background-color: $color-primary;
     grid-row: 1 / -1;
     grid-column: 1 / 2;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: 56.25em) {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        justify-content: flex-end;
+    }
 
     .nav-btn {
-        width: 60%;
+        width: 5rem;
         height: 2px;
         background-color: $color-grey-light-1;
         display: inline-block;
         margin-top: 4rem;
         position: relative;
+
+        @media screen and (max-width: 56.25em) {
+            width: 4rem;
+            margin-top: 3rem;
+            margin-right: 2rem;
+        }
 
         &::before,
         &::after {
@@ -27,10 +40,18 @@
 
         &::before {
             top: -1.5rem;
+
+            @media screen and (max-width: 56.25em) {
+               top: -1rem;
+            }
         }
 
         &::after {
             top: 1.5rem;
+
+            @media screen and (max-width: 56.25em) {
+                top: 1rem;
+             }
         }
     }
 }
